@@ -1,5 +1,6 @@
 import { plantList } from "../datas/plantList";
 import PlantItem from "./PlantItem";
+import { handleClick } from "./PlantItem";
 import "../styles/ShoppingList.css";
 
 function ShoppingList() {
@@ -16,9 +17,10 @@ function ShoppingList() {
           <li key={cat}>{cat}</li>
         ))}
       </ul>
-      <ul className="lmj-plant-list">
+      <ul className="lmj-plant-list" onClick={() => handleClick()}>
         {plantList.map(({ id, cover, name, water, light }) => (
           <PlantItem
+            key={id} // Add the key prop here
             id={id}
             cover={cover}
             name={name}
