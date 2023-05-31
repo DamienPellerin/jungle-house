@@ -1,6 +1,8 @@
+
+
 .lmj-plant-list {
 	list-style-type: none;
-	padding: 32px;
+	padding: 50px;
 	display: flex;
 	flex-wrap: wrap;
 	max-width: 800px;
@@ -11,7 +13,7 @@
 	border-radius: 10px;
 	height: 150px;
 	width: 150px;
-	margin: 10px;
+	margin: 70px;
 	display: flex;
 	align-items: center;
 	justify-content: center;

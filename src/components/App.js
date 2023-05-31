@@ -7,7 +7,7 @@ function App() {
   return (
     <div className="App">
       <Banner />
-      {/*<Cart />*/}
+      <Cart />
       <ShoppingList />
       <Footer />
     </div>

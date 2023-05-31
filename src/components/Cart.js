@@ -1,21 +1,23 @@
 import "../styles/Cart.css";
+import { useState } from "react";
 
 function Cart() {
   const monstreraPrice = 8;
-  const lierrePrice = 10;
-  const bouquetPrice = 15;
+  const [cart, updateCart] = useState(0);
+  const [isOpen, setIsOpen] = useState(false);
 
-  return (
+  return isOpen ? (
     <div className="lmj-cart">
       <h2>Panier</h2>
       <ul>
         <li>Monstera : {monstreraPrice}€</li>
-        <li>Lierre : {lierrePrice}€</li>
-        <li>Bouquet : {bouquetPrice}€</li>
+        <button onClick={() => updateCart(cart + 1)}>Ajouter</button>
       </ul>
 
-      <p>Total : {monstreraPrice + lierrePrice + bouquetPrice}€</p>
+      <p>Total : {monstreraPrice * cart}€</p>
     </div>
+  ) : (
+    <button onClick={() => setIsOpen(true)}>Ouvrir le Panier</button>
   );
 }
 
