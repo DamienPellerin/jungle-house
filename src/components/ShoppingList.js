@@ -10,7 +10,7 @@ function ShoppingList() {
   );
 
   return (
-    <div className="container">
+    <div>
       <ul>
         {categories.map((cat) => (
           <li key={cat}>{cat}</li>
