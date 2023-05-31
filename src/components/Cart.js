@@ -13,6 +13,7 @@ function Cart() {
         <li>Monstera : {monstreraPrice}€</li>
         <button onClick={() => updateCart(cart + 1)}>Ajouter</button>
       </ul>
+      <button onClick={() => updateCart(0)}>Vider le panier</button>
 
       <p>Total : {monstreraPrice * cart}€</p>
     </div>
